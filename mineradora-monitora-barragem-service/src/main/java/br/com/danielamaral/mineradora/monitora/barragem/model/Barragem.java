@@ -34,6 +34,15 @@ public class Barragem {
 	private List<AtributoMonitoramento> atributosMonitoramentos;
 	
 	
+	public void addAtributoMonitoramento(AtributoMonitoramento atributoMonitoramento) {
+		if(this.atributosMonitoramentos == null) {
+			this.atributosMonitoramentos = new ArrayList<>();
+		}
+		
+		this.atributosMonitoramentos.add(atributoMonitoramento);
+	}
+	
+	
 	public static Barragem parseModel(BarragemDto dto) {
 		Barragem  model= new Barragem();
 		model.setId(dto.getId());
