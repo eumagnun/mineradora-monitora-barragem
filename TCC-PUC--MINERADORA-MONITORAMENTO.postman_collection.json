@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "31a58f48-14fa-4555-9b6b-c316d0ba4386",
+		"name": "TCC-PUC--MINERADORA-MONITORAMENTO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Monitoramento Barragem",
+			"item": [
+				{
+					"name": "barragem-cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"barra01\",\r\n  \"risco\": \"normal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio-barragem}}/api/v1/barragem",
+							"host": [
+								"{{dominio-barragem}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"barragem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "barragem-pesquisar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dominio-barragem}}/api/v1/barragem",
+							"host": [
+								"{{dominio-barragem}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"barragem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "barragem-consultar-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dominio-barragem}}/api/v1/barragem/1",
+							"host": [
+								"{{dominio-barragem}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"barragem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "barragem-atualizar-situacao-risco",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{dominio-barragem}}/api/v1/barragem/1/risco/baixo",
+							"host": [
+								"{{dominio-barragem}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"barragem",
+								"1",
+								"risco",
+								"baixo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "barragem-registrar-monitoramento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codigo\": \"instrumento-A001\",\r\n  \"data\": \"2020-06-22T23:20:37.710Z\",\r\n  \"valor\": \"45\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dominio-barragem}}/api/v1/barragem/1/monitoramento",
+							"host": [
+								"{{dominio-barragem}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"barragem",
+								"1",
+								"monitoramento"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
