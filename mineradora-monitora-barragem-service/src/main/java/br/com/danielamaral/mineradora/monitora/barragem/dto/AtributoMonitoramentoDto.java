@@ -9,6 +9,7 @@ import javax.persistence.Id;
 
 import br.com.danielamaral.mineradora.monitora.barragem.model.AtributoMonitoramento;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,10 +22,13 @@ public class AtributoMonitoramentoDto {
 
 	private long id;
 
+	@ApiModelProperty(required = true)
 	private String codigo;
 
+	@ApiModelProperty(required = true)
 	private String valor;
 
+	@ApiModelProperty(required = true)
 	private Date data;
 	
 	
